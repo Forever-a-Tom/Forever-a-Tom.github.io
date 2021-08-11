@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumen ad animam</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <!-- Estante Celular -->
+    <div class="row full-height relleno ocultoenpc primercolor" id="tercera">
+
+      <!-- Celular -->
+      <div class="col-6 derecha">
+        <img src="img/celular.png" alt="celular" class="shake-horizontal cursor" id="objeto3" onmouseup="soltarcelular()">
+      </div>
+
+      <!-- Texto -->
+      <div class="col-6">
+        <h2>...Igualmente,</h2>
+        <p>¿has sentido que</p>
+        <p>falta algo cuando</p>
+        <p>miras al cielo?</p>
+        <!-- Boton va al final -->
+        <a href="luminica.html" class="next round oculto" id="siguientecel"><i class="fa fa-star" aria-hidden="true"></i></a>
+      </div>
+
+    </div>
+
+    <!-- Estante Computadora -->
+    <div class="row full-height relleno ocultoencelular primercolor" id="cuarta">
+
+      <!-- Computadora -->
+      <div class="col-6 derecha">
+        <img src="img/pc.png" alt="pc" class="shake-horizontal cursor" id="objeto4"	onmouseup="soltarpc()">
+      </div>
+
+      <!-- Texto -->
+      <div class="col-6">
+        <h2>...</h2>
+        <p>Igualmente,</p>
+        <p>¿has sentido que falta algo</p>
+        <p>cuando miras al cielo?</p>
+        <!-- Boton va al final -->
+        <a href=luminica.html class="next round oculto" id="siguientepc"><i class="fa fa-star" aria-hidden="true"></i></a>
+      </div>
+
+    </div>
+
+    <!--JavaScript---------------------------------------------->
+    <script type="text/javascript">
+
+      //Celular cambia fondo y aparece boton//
+      function soltarcelular() {
+      document.getElementById('objeto3').src='img/celularapagado.png';
+      document.getElementById('objeto3').classList.remove('cursor', 'shake-horizontal');
+      document.getElementById('siguientecel').classList.remove('oculto');
+      document.getElementById('tercera').classList.add('fondo');
+      document.getElementById('cuarta').classList.add('fondo');
+      }
+
+      //Computadora cambia fondo y aparece boton//
+      function soltarpc() {
+      document.getElementById('objeto4').src='img/pcapagada.png';
+      document.getElementById('objeto4').classList.remove('cursor', 'shake-horizontal');
+      document.getElementById('siguientepc').classList.remove('oculto');
+      document.getElementById('tercera').classList.add('fondo');
+      document.getElementById('cuarta').classList.add('fondo');
+      }
+
+    </script>
+
+  </body>
+
+</html>

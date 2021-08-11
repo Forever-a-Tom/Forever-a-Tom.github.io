@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumen ad animam</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+
+		<div class="row full-height relleno primercolor" id="primera">
+
+			<!-- Lampara de pie -->
+			<div class="col-6 derecha flicker-in-1">
+				<img src="img/lampara.png" alt="lampara" class="shake-horizontal cursor" id="objeto1" onmouseup="soltarlampara()">
+			</div>
+
+			<div class="col-6">
+				<!-- Introduccion -->
+				<h2>Que desperdicio...</h2>
+				<p>tanta luz prendida</p>
+				<p>innecesariamente</p>
+				<!-- Boton va a guirnaldas -->
+				<a href="guirnaldas.html" class="next round oculto" id="boton1"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
+			</div>
+
+		</div>
+
+		<!--JavaScript---------------------------------------------->
+		<script type="text/javascript">
+
+			//Lampara cambia fondo y aparece boton//
+			function soltarlampara() {
+			document.getElementById('objeto1').src='img/lamparaapagada.png';
+			document.getElementById('objeto1').classList.remove('cursor', 'shake-horizontal');
+			document.getElementById('boton1').classList.remove('oculto');
+			document.getElementById('primera').classList.add('fondo');
+			}
+
+		</script>
+
+	</body>
+
+</html>
